@@ -1,4 +1,10 @@
+
+
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+  <div *ngIf="isLoading; else data" class="col-md-1 mx-auto mt-4 spinner-border" [ngStyle]="{'width':'50px','height':'50px'}" role="status" style="align-items: center;">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <ng-template #data>
     <div class="col" *ngFor="let type of types">
       <div class="card">        
         <div class="card-body">
@@ -9,5 +15,6 @@
           <p class="card-text">Created By:{{type.createdBy.name}} </p>
         </div>
       </div>
-    </div>      
+    </div>    
+  </ng-template>  
   </div>

@@ -11,4 +11,7 @@ export class HeaderComponent {
   onLogout(){
     this.userService.Logout();    
   }
+  checkUser():boolean{
+    return !!this.userService.user;
+  }
 }

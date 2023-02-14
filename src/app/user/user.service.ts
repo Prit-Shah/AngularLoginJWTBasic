@@ -12,6 +12,7 @@ export class UserService{
     user!:string;
     setUser(token:string){
         localStorage.setItem('user',token);
+        this.user=token;
        this.tokenTimeout = setTimeout(()=>{
         this.Logout();
     },1000*60*60)
@@ -24,6 +25,7 @@ export class UserService{
     Logout(){
         clearTimeout(this.tokenTimeout);
         localStorage.removeItem('user');
+        this.user = '';
         alert('Please Login Again!')
         this.router.navigate(['login']);
     }
