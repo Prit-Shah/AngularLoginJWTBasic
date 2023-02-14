@@ -92,6 +92,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "BikeTask:build:production",
+            "firebaseProject": "bike-task",
+            "firebaseHostingSite": "bike-task"
+          }
         }
       }
     }

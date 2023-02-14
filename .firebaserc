@@ -1,5 +1,14 @@
 {
+  "targets": {
+    "bike-task": {
+      "hosting": {
+        "BikeTask": [
+          "bike-task"
+        ]
+      }
+    }
+  },
   "projects": {
-    "default": "ng-trial-168d0"
+    "default": "bike-task"
   }
 }
