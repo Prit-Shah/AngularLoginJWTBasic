@@ -12,6 +12,6 @@ export class HeaderComponent {
     this.userService.Logout();    
   }
   checkUser():boolean{
-    return !!this.userService.user;
+    return !!localStorage.getItem('user');
   }
 }

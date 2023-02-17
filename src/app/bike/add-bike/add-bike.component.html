@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form class="row mt-4" (ngSubmit)="onAdd()" #f="ngForm">
+            <div class="form-group col-md-12">
+                <label for="btype" class="sr-only">Type</label>
+               <select name="btype" id="btype" class="form-control" ngModel>
+                <option value={{type._id}} *ngFor="let type of types">
+                    {{type.name}}
+                </option>
+               </select>    
+            </div>
+            <div class="form-group col-md-12">
+                <label for="bname" class="sr-only">Name</label>
+                <input class="form-control" id="bname" type="text" name="bname" ngModel/>    
+            </div>           
+            <div class="form-group col-md-12">
+                <label for="bname" class="sr-only">Photo</label>
+                <input type="file" (change)="fileChange($event)" class="form-control" name="bphoto">    
+            </div>
+            <div class="form-group col-md-2"> 
+            <button type="submit" class="btn btn-success mt-4">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+

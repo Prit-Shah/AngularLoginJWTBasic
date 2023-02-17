@@ -13,7 +13,7 @@ export class SignupComponent {
   
   onSubmit(){
     const {uemail,uname,upass,uphone} = this.form.value;
-    this.http.post('http://localhost:3001/user/signup',{
+    this.http.post('https://bike-task.onrender.com/user/signup',{
       email:uemail,
       name:uname,
       password:upass,
